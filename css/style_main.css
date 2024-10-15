@@ -1,0 +1,351 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(to bottom, #0a0415, #190767);
+    font-family: "Roboto Condensed", sans-serif;
+    overflow-x: hidden;
+}
+.header {
+    background-image: url("../images/dudeSkiing.jpg");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    width: 100vw; 
+    height: 100vh;
+    /* margin-left: calc(-20px); 
+    margin-right: calc(-20px);  */
+    overflow: hidden;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+    
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+.container a[href]{
+    text-decoration: none;
+    color: #000000;
+}
+.container p{
+    color: #000000;
+}
+h2{
+    color: #ffffff;
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.row-1{
+    margin-top: 90px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.row-1 .btn{
+    color: black;
+}
+.col-1{
+    min-width: 300px;
+}
+.col-1 h1{
+    font-size: 50px;
+    color: #000000;
+    line-height: 60px;
+    margin: 25px 0;
+}
+.btn{
+    display: inline-block;
+    background: #ffffff;
+    color: black;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: backgroung 0.5s;
+}
+.btn:hover{
+    background: #655779;
+}
+.header .row{
+    margin-top: 40px;
+}
+
+
+
+/* categories */
+
+.categories{
+    margin: 70px 0;
+}
+.row-2{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.row-2 .btn{
+    color: black;
+}
+.col-3{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.col-3 img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px;
+}
+.col-3 h3{
+    color: #ffffff;
+    text-align: center;
+}
+.smallContainer{
+    display: flex;
+    justify-content: center;
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+
+
+
+/* sport categories */
+.sportCategories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    max-width: 1500px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+
+.sports {
+    text-align: center;
+    color: #ffffff;
+    padding: 15px;
+    transition: transform 0.5s;
+    position: relative; /* Контейнер для кнопки */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Приховує елементи, що виходять за межі */
+}
+
+.sports img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    border-radius: 10%;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.sports:hover {
+    transform: translateY(-10px);
+}
+
+.sports img {
+    display: block; /* Забезпечує, що зображення займає весь простір контейнера */
+}
+.sports a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.imgbtn {
+    position: absolute; /* Абсолютне позиціонування щодо контейнера */
+    bottom: 15%; /* Відступ від низу зображення */
+    left: 50%; /* Позиціонування по горизонталі */
+    transform: translateX(-50%); /* Центрування кнопки */
+    padding: 10px 50px;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 1rem; /* Відносний розмір шрифту */
+}
+
+.imgbtn:hover {
+    background-color: #7390af; /* Зміна кольору при наведенні */
+}
+
+
+
+/* footer */
+.row-3{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.row-3 .btn{
+    color: black;
+}
+#ft a[href]{
+    text-decoration: none;
+    color: #ffffff;
+}
+#ft {
+    background: black;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+#ft p{
+    color: #ffffff;
+}
+#ft h3{
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+.footer-col-1{
+    flex-basis: 30%;
+}
+.footer-col-2{
+    flex: 1;
+    text-align: center;
+}
+.footer-col-2 img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+.footer-col-3, .footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+}
+#ft li{
+   list-style-type: none; 
+}
+
+
+
+/* Медіа-запити для планшетів */
+
+@media only screen and (max-width: 1024px) {
+    .header {
+        height: 40vh;
+    }
+
+    .logo img {
+        width: 150px; /* Зменшити логотип */
+    }
+
+    .navbar ul li {
+        margin-right: 15px;
+    }
+
+    .col-1 h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .col-3 img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .sports img {
+        width: 75%; /* Зменшити зображення для категорій */
+        height: auto;
+        max-width: 300px;
+    }
+
+    .sportCategories {
+        grid-template-columns: repeat(2, 1fr); /* Сітка в 2 колонки */
+    }
+
+    .imgbtn {
+        padding: 8px 20px; /* Зменшити кнопки на менших екранах */
+        font-size: 0.9rem;
+    }
+}
+
+/* Медіа-запити для мобільних пристроїв */
+
+@media only screen and (max-width: 768px) {
+    .header {
+        height: 100vh;
+        align-content: flex-end;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 40vh;
+    }
+
+    .logo img {
+        width: 100px; /* Ще більше зменшити логотип на маленьких екранах */
+    }
+
+    .navbar ul {
+        text-align: left;
+    }
+
+    .row-1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-1 h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .col-3 img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .sportCategories {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .imgbtn {
+        padding: 6px 15px; /* Ще більше зменшити кнопки для мобільних пристроїв */
+        font-size: 0.8rem;
+    }
+
+    .sports img {
+        width: 100%;
+        height: auto;
+        max-width: 200px; /* Менші зображення для спортивних категорій */
+    }
+}
+
