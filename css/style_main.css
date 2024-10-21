@@ -24,7 +24,7 @@ body{
 .navbar{
     display: flex;
     align-items: center;
-    padding: 20px;
+    justify-content: space-between;
 }
 nav{
     flex: 1;
@@ -44,6 +44,7 @@ nav ul li{
     color: #000000;
 }
 .container p{
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     color: #000000;
 }
 h2{
@@ -68,7 +69,8 @@ h2{
     min-width: 300px;
 }
 .col-1 h1{
-    font-size: 50px;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.2;
     color: #000000;
     line-height: 60px;
     margin: 25px 0;
@@ -80,6 +82,7 @@ h2{
     padding: 8px 30px;
     margin: 30px 0;
     border-radius: 30px;
+    font-size: 1rem;
     transition: backgroung 0.5s;
 }
 .btn:hover{
@@ -94,7 +97,8 @@ h2{
 /* categories */
 
 .categories{
-    margin: 70px 0;
+    /* margin: 70px 0; */
+    padding: 50px 0;
 }
 .row-2{
     display: flex;
@@ -205,46 +209,37 @@ h2{
 .row-3{
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
     flex-wrap: wrap;
     justify-content: space-around;
-}
-.row-3 .btn{
-    color: black;
 }
 #ft a[href]{
     text-decoration: none;
     color: #ffffff;
 }
 #ft {
-    background: black;
-    color: #ffffff;
+    background: #000000;
+    color: #fff;
     font-size: 14px;
     padding: 60px 0 20px;
 }
 #ft p{
-    color: #ffffff;
+    color: #fff;
 }
 #ft h3{
-    color: #ffffff;
     margin-bottom: 20px;
 }
 .footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
-    min-width: 250px;
+    min-width: 200px;
     margin-bottom: 20px;
 }
 .footer-col-1{
     flex-basis: 30%;
 }
-.footer-col-2{
-    flex: 1;
-    text-align: center;
-}
-.footer-col-2 img{
-    width: 180px;
+.footer-col-1 img{
+    width: 100px;
     margin-bottom: 20px;
 }
-.footer-col-3, .footer-col-4{
+.footer-col-2, .footer-col-3, .footer-col-4{
     flex-basis: 12%;
     text-align: center;
 }
@@ -258,11 +253,14 @@ h2{
 
 @media only screen and (max-width: 1024px) {
     .header {
-        height: 40vh;
+        height: 50vh;
+    }
+    .navbar {
+        margin-bottom: 15vh;
     }
 
     .logo img {
-        width: 150px; /* Зменшити логотип */
+        width: 150px; 
     }
 
     .navbar ul li {
@@ -280,17 +278,17 @@ h2{
     }
 
     .sports img {
-        width: 75%; /* Зменшити зображення для категорій */
+        width: 75%; 
         height: auto;
         max-width: 300px;
     }
 
     .sportCategories {
-        grid-template-columns: repeat(2, 1fr); /* Сітка в 2 колонки */
+        grid-template-columns: repeat(2, 1fr); 
     }
 
     .imgbtn {
-        padding: 8px 20px; /* Зменшити кнопки на менших екранах */
+        padding: 8px 20px; 
         font-size: 0.9rem;
     }
 }
@@ -310,7 +308,7 @@ h2{
     }
 
     .logo img {
-        width: 100px; /* Ще більше зменшити логотип на маленьких екранах */
+        width: 100px; 
     }
 
     .navbar ul {
@@ -338,14 +336,34 @@ h2{
     }
 
     .imgbtn {
-        padding: 6px 15px; /* Ще більше зменшити кнопки для мобільних пристроїв */
+        padding: 6px 15px; 
         font-size: 0.8rem;
     }
 
     .sports img {
         width: 100%;
         height: auto;
-        max-width: 200px; /* Менші зображення для спортивних категорій */
+        max-width: 200px; 
     }
 }
+@media (max-width: 768px) and (min-height: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 40vh;
+    }
 
+}
+@media (max-width: 768px) and (min-height: 1024px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 50vh;
+    }
+    .col-3 {
+        min-width: 200px;
+    }
+    .footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+        min-width: 100px;
+    }
+}
